@@ -20,6 +20,7 @@ const container = require('./container');
 
 
 
+
 container.resolve(function(users, _, admin, home, group, results, privatechat, profile, interests, news){
     
     mongoose.Promise = global.Promise;
