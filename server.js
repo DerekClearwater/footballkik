@@ -23,7 +23,7 @@ const container = require('./container');
 container.resolve(function(users, _, admin, home, group, results, privatechat, profile, interests, news){
     
     mongoose.Promise = global.Promise;
-    mongoose.connect('mongodb://adminfootball:newpizza@footballkik-shard-00-00-vbxae.mongodb.net:27017,footballkik-shard-00-01-vbxae.mongodb.net:27017,footballkik-shard-00-02-vbxae.mongodb.net:27017/test?ssl=true&replicaSet=footballkik-shard-0&authSource=admin&retryWrites=true&w=majority', {useMongoClient: true});
+    mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
     
     const app = SetupExpress();
     
